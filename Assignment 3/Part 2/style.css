@@ -11,4 +11,6 @@ div{
   text-align: center;
   font-size: 1.1rem;
   background-color: red;
+  color: white;
+  text-shadow: 1px 1px 1px black;
 }
