@@ -8,9 +8,22 @@ div{
   width: 200px;
   height: 200px;
   line-height: 200px;
+
   text-align: center;
   font-size: 1.1rem;
   background-color: red;
+
   color: white;
   text-shadow: 1px 1px 1px black;
+
+  /*border*/
+  border-radius: 10px;
+  border: 1px solid darkred;
+  
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
 }
