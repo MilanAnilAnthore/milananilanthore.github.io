@@ -115,3 +115,9 @@ a:visited{
 a:active{
   color: green;
 }
+
+a[href*="http"] {
+  padding-right: 19px;
+  background: url(Images/externallinkpicind.png) no-repeat 100% 0;
+  background-size: 16px 16px;
+}
