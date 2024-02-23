@@ -93,3 +93,25 @@ p, li{
   letter-spacing: 0.5px;
   word-spacing: 2px;
 }
+
+section h2 + p {
+  text-indent: 20px;
+}
+
+a{
+  outline: none;
+}
+
+a:hover,
+a:focus{
+  text-decoration: none;
+}
+
+a:link,
+a:visited{
+  color: #a66;
+}
+
+a:active{
+  color: green;
+}
