@@ -121,3 +121,30 @@ a[href*="http"] {
   background: url(Images/externallinkpicind.png) no-repeat 100% 0;
   background-size: 16px 16px;
 }
+
+
+nav li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  line-height: 3;
+  text-align: center;
+  font-size: 3rem;
+  border: 1px solid #a66;
+}
+
+nav li a:focus, nav li a:hover {
+  color: white;
+  background: #a66;
+}
+
+nav li a:active {
+  color: white;
+  background: green;
+}
+
+nav li{
+  margin: 1rem;
+}
+
+
