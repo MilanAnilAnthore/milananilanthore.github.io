@@ -67,3 +67,12 @@ header, footer {
 
 }
 
+
+html{
+  font-family: 'libre_baskervilleregular', serif;
+  font-size: 10px;
+}
+
+h1, h2{
+  font-family: 'roboto_condensedbold_italic', sans-serif;
+}
