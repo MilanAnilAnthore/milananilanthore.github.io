@@ -1,5 +1,9 @@
-// setup canvas
+// Name: Milan Anil Anthore
+// File: main.js
+// Date: 20 March 2024
+// A programme which creates bouncing ball demo
 
+// setup canvas\
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 

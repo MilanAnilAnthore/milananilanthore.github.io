@@ -1,3 +1,8 @@
+// Name: Milan Anil Anthore
+// File: main.js
+// Date: 20 March 2024
+// A programme which generates image gallery
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
