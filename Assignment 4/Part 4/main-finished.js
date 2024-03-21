@@ -98,8 +98,8 @@ class EvilCircle extends Shape {
 
     this.color = "white";
     this.size = 10;
-  }
-}
+  
+
 
 window.addEventListener("keydown", (e) => {
   switch (e.key) {
@@ -115,8 +115,17 @@ window.addEventListener("keydown", (e) => {
     case "s":
       this.y += this.velY;
       break;
-  }
-});
+    }
+  });
+ }
+ draw() {
+  ctx.beginPath();
+  ctx.strokeStyle = this.color;
+  ctx.lineWidth = 3;
+  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.stroke();
+}
+}
 
 
 const balls = [];
