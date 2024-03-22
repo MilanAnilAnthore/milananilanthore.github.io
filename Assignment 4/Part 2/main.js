@@ -31,7 +31,14 @@ newImage.setAttribute('src', 'images/'+filename);
 newImage.setAttribute('alt', altTexts[filename]);
 thumbBar.appendChild(newImage);
 
+  // Add click event listener to each thumbnail image
+  newImage.addEventListener('click', () => {
+    displayedImage.setAttribute('src', 'images/' + filename);
+    displayedImage.setAttribute('alt', altTexts[filename]);
+  });
 });
+
+
 /* Wiring up the Darken/Lighten button */
 
 
