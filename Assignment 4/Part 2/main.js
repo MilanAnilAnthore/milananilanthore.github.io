@@ -15,6 +15,14 @@ const imageFilenames = ['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jp
 
 /* Declaring the alternative text for each image file */
 
+const altTexts = {
+    'pic1.jpg': 'A really close image of an human eye',
+    'pic2.jpg': 'A weird but beautiful image with lots of curvy lines',
+    'pic3.jpg': 'Lots of white and blue flowers',
+    'pic4.jpg': 'A image showing old egyptian painting',
+    'pic5.jpg': 'Picture of a butterfly'
+  };
+
 /* Looping through images */
 
 const newImage = document.createElement('img');
