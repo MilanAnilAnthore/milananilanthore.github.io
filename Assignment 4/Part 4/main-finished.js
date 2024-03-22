@@ -3,7 +3,7 @@
 // Date: 20 March 2024
 // A programme which includes some changes and add-ons on the bouncing ball demo
 
-
+// Element to show the count of balls.
 const countDisplay = document.querySelector('p');
 let count = 0;
 
@@ -27,7 +27,7 @@ function randomRGB() {
 }
 
 
-
+// Shape class is created
 class Shape {
 
   constructor(x, y, velX, velY) {
@@ -39,6 +39,7 @@ class Shape {
 
 }
 
+// Ball class inherits from Shape class
 class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
     super(x, y, velX, velY)
@@ -47,6 +48,7 @@ class Ball extends Shape {
     this.exists = true;
   }
 
+  // It is the method to draw the ball
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
@@ -54,6 +56,7 @@ class Ball extends Shape {
     ctx.fill();
   }
 
+  // update is the method which updates the balls position
   update() {
     if (this.x + this.size >= width) {
       this.velX = -Math.abs(this.velX);
@@ -75,6 +78,7 @@ class Ball extends Shape {
     this.y += this.velY;
   }
 
+  // collisionDetect is used to detect the collision of balls with other balls.
   collisionDetect() {
     for (const ball of balls) {
       if (!(this === ball) && ball.exists) {
@@ -90,6 +94,7 @@ class Ball extends Shape {
   }
 }
 
+// A class called EvilCircle is created which inherits from the Shape class
 class EvilCircle extends Shape {
 
   constructor(x, y) {
@@ -117,6 +122,8 @@ window.addEventListener("keydown", (e) => {
     }
   });
  }
+
+ // Method to draw the EvilCircle
   draw() {
     ctx.beginPath();
     ctx.strokeStyle = this.color;
@@ -124,6 +131,7 @@ window.addEventListener("keydown", (e) => {
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
   }
+
 
   checkBounds() {
     if ((this.x + this.size) >= width) {
@@ -164,9 +172,10 @@ window.addEventListener("keydown", (e) => {
 
 }
 
-
+// An array for balls are created
 const balls = [];
 
+// this loop make random balls
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
