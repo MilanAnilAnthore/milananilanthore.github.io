@@ -4,6 +4,9 @@
 // A programme which includes some changes and add-ons on the bouncing ball demo
 
 
+const countDisplay = document.querySelector('p');
+let count = 0;
+
 // set up canvas
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -39,10 +42,6 @@ class Shape {
 class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
     super(x, y, velX, velY)
-    this.x = x;
-    this.y = y;
-    this.velX = velX;
-    this.velY = velY;
     this.color = color;
     this.size = size;
     this.exists = true;
@@ -127,20 +126,20 @@ window.addEventListener("keydown", (e) => {
   }
 
   checkBounds() {
-    if (this.x + this.size >= width) {
-      this.velX = -Math.abs(this.x);
+    if ((this.x + this.size) >= width) {
+      this.x -= this.size;
     }
 
-    if (this.x - this.size <= 0) {
-      this.velX = Math.abs(this.x);
+    if ((this.x - this.size) <= 0) {
+      this.x += this.size;
     }
 
-    if (this.y + this.size >= height) {
-      this.velY = -Math.abs(this.y);
+    if ((this.y + this.size) >= height) {
+      this.y -= this.size;
     }
 
-    if (this.y - this.size <= 0) {
-      this.velY = Math.abs(this.y);
+    if ((this.y - this.size) <= 0) {
+      this.y += this.size;
     }
   }
   
@@ -154,7 +153,7 @@ window.addEventListener("keydown", (e) => {
         if (distance < this.size + ball.size) {
           ball.exists = false;
           count--;
-          parseFloat.textContent = 'Ball count: ' + count;
+          countDisplay.textContent = 'Ball count: ' + count;
         }
       }
     }
@@ -182,6 +181,8 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  count++;
+  countDisplay.textContent = 'Ball count: ' + count;
 }
 
 const darkBall = new EvilCircle(random(0, width), random(0, height));
