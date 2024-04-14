@@ -1,3 +1,12 @@
+/**
+ * <!--
+	Name: Milan Anil Anthore
+	File: main.js
+	Date: 13 April 2025
+	This is the js file for the project which makes a wildlife website
+	-->
+ */
+
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
